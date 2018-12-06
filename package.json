@@ -1,6 +1,6 @@
 {
-  "name": "@arkecosystem/client",
-  "description": "A JavaScript library to interact with the Ark Blockchain",
+  "name": "@phantomchain/client",
+  "description": "A JavaScript library to interact with the Phantom Blockchain",
   "version": "0.1.16",
   "contributors": [
     "Brian Faust <brian@ark.io>",

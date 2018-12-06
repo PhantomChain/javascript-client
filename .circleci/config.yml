@@ -1,7 +1,7 @@
 version: 2
 jobs:
   test-node9:
-    working_directory: ~/arkecosystem/client
+    working_directory: ~/phantomchain/client
     docker:
       - image: circleci/node:9-browsers
     steps:
@@ -22,12 +22,12 @@ jobs:
           paths:
             -  ./node_modules
       - run:
-          name: Create .ark/database directory
-          command: mkdir -p $HOME/.ark/database
+          name: Create .phantom/database directory
+          command: mkdir -p $HOME/.phantom/database
       - run:
           name: Test
           command: |
-            ./node_modules/.bin/cross-env ARK_ENV=test ./node_modules/.bin/jest --detectOpenHandles --runInBand --forceExit | tee test_output.txt
+            ./node_modules/.bin/cross-env PHANTOM_ENV=test ./node_modules/.bin/jest --detectOpenHandles --runInBand --forceExit | tee test_output.txt
       - run:
           name: Last 1000 lines of test output
           when: on_fail
@@ -37,7 +37,7 @@ jobs:
           command: yarn lint
 
   test-node10:
-    working_directory: ~/arkecosystem/client
+    working_directory: ~/phantomchain/client
     docker:
       - image: circleci/node:10-browsers
     steps:
@@ -58,8 +58,8 @@ jobs:
           paths:
             -  ./node_modules
       - run:
-          name: Create .ark/database directory
-          command: mkdir -p $HOME/.ark/database
+          name: Create .phantom/database directory
+          command: mkdir -p $HOME/.phantom/database
       - run: # Running --ci --coverage only here because causes "heap out of memory" error on node 9
           name: Test
           command: |

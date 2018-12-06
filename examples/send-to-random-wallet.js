@@ -5,7 +5,7 @@ const crypto = require('../../crypto/lib/index')
 
 const sendGift = async () => {
   const version = 2
-  const amount = 1 * Math.pow(10, 8) // 1 DARK
+  const amount = 1 * Math.pow(10, 8) // 1 DPHANTOM
 
   let client
 
@@ -90,27 +90,27 @@ const sendGift = async () => {
     fail('An error has occured while trying to connect to the network:', error.message)
   }
 
-  const sender = process.env.ARK_CLIENT_EXAMPLE_SENDER
+  const sender = process.env.PHANTOM_CLIENT_EXAMPLE_SENDER
   if (!sender) {
-    fail('It is necessary to establish the value of the environment variable "ARK_CLIENT_EXAMPLE_SENDER" to an address')
+    fail('It is necessary to establish the value of the environment variable "PHANTOM_CLIENT_EXAMPLE_SENDER" to an address')
   }
 
-  const passphrase = process.env.ARK_CLIENT_EXAMPLE_PASS
+  const passphrase = process.env.PHANTOM_CLIENT_EXAMPLE_PASS
   if (!sender) {
-    fail('It is necessary to establish the value of the environment variable "ARK_CLIENT_EXAMPLE_PASS" to the passphrase of the "ARK_CLIENT_EXAMPLE_SENDER" address')
+    fail('It is necessary to establish the value of the environment variable "PHANTOM_CLIENT_EXAMPLE_PASS" to the passphrase of the "PHANTOM_CLIENT_EXAMPLE_SENDER" address')
   }
 
   const senderWallet = await getWallet(sender)
 
   if (senderWallet.balance < amount) {
-    fail(`The sender wallet (${senderWallet.address}) does not have enough balance (${senderWallet.balance} DARK)`)
+    fail(`The sender wallet (${senderWallet.address}) does not have enough balance (${senderWallet.balance} DPHANTOM)`)
   }
 
   const recipientWallet = await getRandomWallet()
   const recipient = recipientWallet.address
 
   const transaction = await postTransaction({ recipient, senderPublicKey: senderWallet.address, passphrase })
-  const explorerUrl = 'https://dexplorer.ark.io/transaction/'
+  const explorerUrl = 'https://dexplorer.phantom.org/transaction/'
   console.log(`\n\tThe gift has been sent to ${recipient} (${explorerUrl}${transaction.id})\n`)
 }
 
