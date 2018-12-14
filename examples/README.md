@@ -5,7 +5,8 @@ This example sends 1 DPHANTOM to a random wallet if you've enough balance.
 
  * To use this example, it's necessary having a devnet wallet with at least 1.1 DPHANTOM.
 
-To run it:
+
+To try this example, install the dependencies, and execute the script:
 ```
 cd packages/client/examples
 PHANTOM_CLIENT_EXAMPLE_SENDER="devnet wallet address" PHANTOM_CLIENT_EXAMPLE_PASS="the twelve words that forms the password of the wallet" ./post-transaction.js
