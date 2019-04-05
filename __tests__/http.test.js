@@ -19,7 +19,7 @@ describe('API - HTTP Client', () => {
 
   beforeEach(() => {
     defaultHeaders = {
-      'Accept': `application/vnd.phantom.core-api.v${client.version}+json`
+      'API-Version': client.version
     }
   })
 

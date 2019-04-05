@@ -7,6 +7,27 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
+## 0.1.20 - 2019-01-28
+
+### Fixed
+- Check status and version to find peers
+- Clone peer list as to not overwrite default network peers
+
+## 0.1.19 - 2019-01-25
+
+### Changed
+- Added transaction fees v2 endpoint
+
+## 0.1.18 - 2019-01-22
+
+### Changed
+- Allow https peer option when finding peers
+
+## 0.1.17 - 2019-01-16
+
+### Changed
+- Use standard API-Version header
+
 ## 0.1.16 - 2018-12-04
 
 ### Fixed
