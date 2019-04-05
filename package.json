@@ -1,5 +1,5 @@
 {
-  "name": "@phantomchain/client",
+  "name": "@phantomcores/client",
   "description": "A JavaScript library to interact with the Phantom Blockchain",
   "version": "0.1.20",
   "contributors": [
