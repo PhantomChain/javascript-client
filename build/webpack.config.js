@@ -23,7 +23,7 @@ const browserConfig = {
   },
   output: {
     ...format(pkg.browser),
-    library: 'PhantomChainClient',
+    library: 'ArkEcosystemClient',
     libraryTarget: 'umd',
     umdNamedDefine: true,
     globalObject: 'this'

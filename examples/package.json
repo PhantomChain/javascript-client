@@ -1,11 +1,11 @@
 {
   "private": true,
-  "name": "ark-client-examples",
+  "name": "phantom-client-examples",
   "version": "1.0.0",
-  "description": "Ark JavaScrip examples",
+  "description": "Phantom JavaScrip examples",
   "license": "MIT",
   "dependencies": {
-    "@arkecosystem/client": "^0.1.16",
-    "@arkecosystem/crypto": "^0.2.5"
+    "@phantomcores/client": "^0.1.16",
+    "@phantomcores/crypto": "^0.2.5"
   }
 }

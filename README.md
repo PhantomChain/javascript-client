@@ -9,13 +9,13 @@
 ### Node.js
 
 ```bash
-yarn add @phantomchain/client
+yarn add @phantomcores/client
 ```
 
 If you want to use the CDN version:
 
 ```html
-<script src="https://unpkg.com/@phantomchain/client/dist/bundle.umd.js"></script>
+<script src="https://unpkg.com/@phantomcores/client/dist/index.umd.js"></script>
 ```
 
 ## Usage
@@ -23,17 +23,17 @@ If you want to use the CDN version:
 Import the library in Node.js:
 
 ```
-import PhantomChainClient from @phantomchain/client
+import ArkEcosystemClient from @phantomcores/client
 ```
 or
 ```
-const PhantomChainClient require('@phantomchain/client')
+const ArkEcosystemClient require('@phantomcores/client')
 ```
 
 Use the library:
 
 ```
-const client = new PhantomChainClient('<your host here>')
+const client = new ArkEcosystemClient('<your host here>')
 ```
 
 ### Examples
@@ -41,7 +41,7 @@ There are more examples in the `examples` folder.
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to security@ark.io. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to security@phantom.io. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
@@ -53,4 +53,4 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## License
 
-[MIT](LICENSE) © [PhantomChain](https://phantom.org)
+[MIT](LICENSE) © [ArkEcosystem](https://phantom.io)
